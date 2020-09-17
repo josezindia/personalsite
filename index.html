@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jose Zindia</title>
+  <link rel ="stylesheet" type ="text/css" href ="styles.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<header>
+  <a class="logo" id="logo" href="index.html">
+    <img class= "logo" src="img/logo.png" width="100" alt="">
+  </a>
+
+  <div class= "toggle" onclick="toggleMenu();"></div>
+    <ul class="menu">
+      <li><a href="#home" onclick="toggleMenu();">Home</a></li>
+      <li><a href="#about" onclick="toggleMenu();">About Me</a></li>
+      <li><a href="#schedule" onclick="toggleMenu();">My Schedule</a></li>
+      <li><a href="projects.html" onclick="toggleMenu();">Projects</a></li>
+      <li><a href="#contact" onclick="toggleMenu();">Contact</a></li>
+  
+    </ul>
+  
+</header>
+
+<section class = "banner" id="home">
+   <div class="textBx">
+    <h2>Hi,<br><span> I'm Jose</span></h2>
+    <h3>I'm a Web Developer.</h3>
+    <a href="#about" class="btn">About Me</a>
+  </div>
+  <div class="profile-image">
+    <img src="img/profile-image.png" alt="">
+
+  </div>
+
+</section>
+
+ <!-- Personal Profile -->
+<section class="about" id="about">
+  <div class="heading">
+    <h2>About Me</h2>  
+  </div>
+
+<div class="content">
+  <div class="contentBx w50">
+
+   <p>I am a graduate student at Pitt with a creative mind and a love for computers 
+    and the way in which they operate . I’m currently doing my MS in Information Science 
+    and I have experience working with Python, Nodejs, Javascript and SQL database. <br><br>
+    In my free time, I enjoy running, cooking, playing with technologies and being a policy wonk.</p>
+  </div>
+  <div class="w50">
+    <img src="img/image2.jpg" class="img"  alt="">
+  </div>
+</div>
+</section>
+
+ <!-- Course Schedule -->
+
+ <section class="schedule" id="schedule">
+  <div class="heading">
+    <h3>Schedule</h3>
+    <p>Below is my class schedule for the Fall 2020 semester.</p>
+  </div>
+  <div  class="content">
+    <div class= "mySchedule">
+      <table class="mySchedule"> 
+  <thead>
+    <tr>
+      <th></th>
+      <th>Mon</th>
+      <th>Tue</th>
+      <th>Wed</th>
+      <th>Thur</th>
+      <th>Fri</th>     
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+
+      <td>
+        <div class="subject">Social Computing</div>
+        <div class="time">8:55-11:45AM</div>
+      </td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>  
+    </tr>
+
+    <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+
+      <tr>
+      <td colspan="6" class="break">&nbsp;</td>
+      </tr>
+      <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      
+    </tr>
+      <tr>
+      <td colspan="6" class="lunch">Lunch</td>
+      </tr>
+      <tr>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>
+        <div class="subject">Intro To Neural Networks</div>
+        <div class="time">3:25-6:15PM</div>
+      </td>
+      <td>
+        <div class="subject">Geospatial Info Systems</div>
+        <div class="time">12:10-2:35PM</div>
+      </td>
+      <td>&nbsp;</td>
+      </tr>
+      <tr>
+      <td>&nbsp;</td>
+      <td>        
+        <div class="subject">Network & Data Technologies</div>
+        <div class="time">6:00-8:50PM</div>
+      </td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</section>
+
+
+ <!-- Contact -->
+<hr>
+ <section class="contact" id="contact">
+  <div class="heading">
+    <h2>Contact</h2>
+  </div>
+  <div class="content">
+    <div class="contact">
+      <p>I'd love to hear from you! Please click on the link below.</p>
+      <a href="mailto:josezindia36@gmail.com?" class="btn btn-default btn-contact" >Email</a>
+    </div>
+</div>
+</section>
+
+<!-- footer --> 
+
+<Footer>
+  <p>&copy; Jose Zindia, 2020. All Rights Reserved.</p>
+</Footer>
+
+<script type="text/javascript">
+  window.addEventListener('scroll',function(){
+    var header =document.querySelector('header');
+    header.classList.toggle('sticky',window.scrollY >0);
+  });
+  
+  function toggleMenu(){
+    var menuToggle = document.querySelector('.toggle');
+    var menu = document.querySelector('.menu');
+    menuToggle.classList.toggle('active');
+    menu.classList.toggle('active');
+  }
+</script>
+</body>
+</html>
